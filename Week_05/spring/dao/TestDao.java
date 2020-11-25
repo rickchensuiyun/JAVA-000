@@ -10,4 +10,11 @@ public class TestDao implements ITestDao{
     public void add() {
         System.out.println("》》》》》》》》add");
     }
+
+    @Override
+    public void query(){
+
+        List<Map<String,Object>> list =  super.getJdbcTemplate().queryForList("select * from city");
+        System.out.println(list.size());
+    }
 }

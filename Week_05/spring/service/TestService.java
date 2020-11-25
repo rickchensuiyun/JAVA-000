@@ -14,6 +14,10 @@ public class TestService {
         dao.add();
     }
 
+    public void query() {
+        dao.query();
+    }
+
     public ITestDao getDao() {
         return dao;
     }

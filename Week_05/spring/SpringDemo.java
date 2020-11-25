@@ -11,5 +11,8 @@ public class SpringDemo {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         TestService service = (TestService)context.getBean("testService");
         service.addService();
+
+        //使用hikari查询
+        service.query();
     }
 }
