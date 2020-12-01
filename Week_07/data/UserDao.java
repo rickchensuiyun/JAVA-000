@@ -2,6 +2,12 @@ package com.mk.stu.course.week07.data;
 
 import java.sql.*;
 
+/**
+ * 这里使用了批量插入和单条插入的方式。都是采用预编译的方式。
+ *
+ * 批量插入百万数据的时间大概是90s，单条插入的时间大概是240s。批量插入的效率比单条插入高得多。
+ * 如果不采用预编译的方式，相信会更慢。
+ */
 public class UserDao {
 
     public static final String URL = "jdbc:mysql://localhost:3306/devrepo?useUnicode=true&characterEncoding=UTF-8";
